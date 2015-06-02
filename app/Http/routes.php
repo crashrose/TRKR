@@ -11,11 +11,55 @@
 |
 */
 
-Route::get('/', 'WelcomeController@index');
+Route::get('/', function()
+{
+	return view('pages.home');
+});
 
-Route::get('home', 'HomeController@index');
+Route::get('home', function()
+{
+	return view('pages.home');
+});
 
-Route::controllers([
-	'auth' => 'Auth\AuthController',
-	'password' => 'Auth\PasswordController',
-]);
+// Route::controllers([
+// 	'auth' => 'Auth\AuthController',
+// 	'password' => 'Auth\PasswordController',
+// ]);
+
+Route::get('comedy', function()
+{
+	return view('pages.comedy');
+});
+
+Route::get('football', function()
+{
+	return view('pages.football');
+});
+
+Route::get('projects', function()
+{
+	return view('pages.projects');
+});
+
+Route::get('resume', function()
+{
+	return view('pages.resume');
+});
+
+Route::get('personal', function()
+{
+	return view('pages.personal');
+});
+
+Route::get('art', function()
+{
+	return view('pages.art');
+});
+
+Route::get('peg_game', function()
+{
+	return view('pages.projects.peg_game');
+});
+
+
+
